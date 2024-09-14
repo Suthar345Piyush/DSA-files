@@ -188,4 +188,123 @@ int main(){
   pattern8(n);
 }
 
+//combination of the both pyramid
+
+#include<iostream>
+using namespace std;
+void pattern8(int n){
+  for(int i = 0; i < n; i++){
+    //space
+    for(int j = 0; j < i; j++){
+      cout << " ";
+    }
+    //star formula  = 2*n - (2*i+1)
+    for(int j =0; j< 2*n - (2*i+1); j++){
+     cout << "*";
+    }
+    //space 
+    for(int j = 0; j < i; j++){
+      cout << " ";
+    }
+    cout << endl;
+  }
+}
+
+int main(){
+  int n;
+  cin >> n;
+  pattern7(n);
+  pattern8(n);
+}
+
+//right angle triangle on up and down half in length
+
+//*
+//**
+//***
+//****
+//*****
+//****
+//***
+//**
+//*
+
+#include<iostream>
+using namespace std;
+void pattern9(int n){
+
+  for(int i = 1; i <= 2*n-1; i++){
+    int stars = i;
+    if(i > n){
+      stars = 2*n-i;
+    }
+    for(int j = 1; j <= stars; j++){ //inner loop
+      cout << "*";
+    }
+    cout << endl;
+  }
+}
+int main(){
+  int n;
+  cin >> n;
+  pattern9(n);
+}
+
+// 10101 in form of right angle
+#include<iostream>
+using namespace std;
+
+void pattern10(int n){
+  int start = 1;
+  for(int i = 0; i < n; i++){
+    if(i % 2 == 0){
+     start = 1;
+     }
+     else{
+      start = 0;
+     }
+     for(int j = 0; j <= i; j++ ){
+    cout << start;
+    start = 1- start;
+     }
+
+  cout << endl;
+  }
+}
+
+int main(){
+  int n;
+  cin >> n;
+  pattern10(n);
+}
+
+//pattern of the numbers
+#include<iostream>
+using namespace std;
+
+void pattern11(int n){
+  int space = 2*n-1;
+  for(int i = 0; i<= n; i++){
+    //numbers
+    for(int j =1; j <= i; j++){
+      cout << j;
+    }
+    //space 
+    for(int j = 1; j <= space; j++){
+      cout << " ";
+    }
+    //numbers
+    for(int j = i; j >= 1; j--){
+      cout << j;
+    }
+    cout << endl;
+    space = space - 2;
+  }
+}
+int main(){
+ int n;
+ cin >> n;
+ pattern11(n);
+}
+
 
