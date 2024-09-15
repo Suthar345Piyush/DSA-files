@@ -307,4 +307,69 @@ int main(){
  pattern11(n);
 }
 
+//pattern-12
+//right angle triangle of differnt numbers
+
+
+#include<iostream>
+using namespace std;
+void pattern12(int n){
+   int num = 1;
+  for(int i = 1; i <= n; i++){
+    for(int j = 1; j <= i; j++){
+      cout << num;
+      num = num + 1;
+    }
+    cout << endl;
+  }
+}
+int main(){
+  int n;
+  cin >>n;
+  pattern12(n);
+}
+
+
+//letters same triangle 
+
+#include<iostream>
+using namespace std;
+void pattern13(int n){
+char ch;
+for(int i = 0; i < n; i++){
+  for(char ch = 'A'; ch <= 'A' + i; ch++){
+    cout << ch << " ";
+       }
+  cout << endl;
+    }
+}
+
+int main(){
+  int n;
+  cin >> n;
+  pattern13(n);
+}
+
+//letters down triangle
+
+#include<iostream>
+using namespace std;
+void pattern14(int n){
+  char ch;
+  for(int i = 0; i<=n; i++){
+    for(char ch = 'A'; ch <= 'A'-i+n; ch++){
+      cout << ch << " ";
+    }
+    cout << endl;
+  }
+}
+int main(){
+  int n;
+  cin >>n;
+  pattern14(n);
+}
+
+
+
+
 
