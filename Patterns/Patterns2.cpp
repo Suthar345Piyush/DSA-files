@@ -140,3 +140,94 @@ int main(){
   pattern17(n);
 
 }
+
+
+//pattern18 for stars
+
+#include<iostream>
+using namespace std;
+void pattern18(int n){
+  int init = 0;
+  for(int i = 0; i<n; i++){
+    //stars = n-i
+    for(int j = 1; j <= n-i; j++){
+      cout << "*";
+    }
+    //spaces 
+    for(int j=0; j<init; j++){
+      cout << " ";
+    }
+    //stars
+    for(int j=1; j<= n-i; j++){
+      cout << "*";
+    }
+    init += 2;  //for growing the stars upperside
+    cout << endl;
+  }
+
+  init = 2*n-2;
+    for(int i=1; i<=n; i++){
+       for(int j = 1; j <= i; j++){
+      cout << "*";
+    }
+    //spaces 
+    for(int j=0; j<init; j++){
+      cout << " ";
+    }
+    //stars
+    for(int j=1; j<= i; j++){
+      cout << "*";
+    }
+    init -= 2; //for reducing down side stars
+    cout << endl;
+  }
+    }
+
+
+
+int main(){
+  int n;
+  cin >> n;
+  pattern18(n);
+
+}
+
+//pattern19(stars pattern)
+
+#include<iostream>
+using namespace std;
+void pattern19(int n){
+  int spaces =  2*n-2;
+  for(int i = 1; i<=2*n-1; i++){
+    int stars = i;
+    if(i>n) stars = 2*n-i;
+
+  //stars
+   for(int j=1; j<=stars; j++){
+    cout << "*";
+   }
+
+  //spaces
+  for(int j=1; j<=spaces; j++){
+    cout << " ";
+  }
+
+  //stars
+  for(int j=1; j<=stars; j++){
+    cout << "*";
+  }
+
+  cout << endl;
+  if(i < n) spaces -= 2;
+  else spaces += 2;
+  }
+}
+
+
+int main(){
+
+  int n; 
+  cin >>n;
+  pattern19(n);
+
+}
