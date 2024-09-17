@@ -231,3 +231,55 @@ int main(){
   pattern19(n);
 
 }
+
+
+//pattern20 
+//star square pattern
+
+#include<iostream>
+using namespace std;
+void pattern20(int n){
+  for(int i=0; i<n; i++){
+    for(int j=0; j<n; j++){
+      if(i==0 || j == 0 || i == n-1 || j == n-1){
+        cout<< "*";
+      }
+      else
+        cout<< " ";
+    }
+    cout << endl;
+  }
+}
+int main(){
+  int n;
+  cin >> n;
+  pattern20(n);
+
+}
+
+//random numbers
+//pattern21
+
+#include<iostream>
+using namespace std;
+void pattern21(int n){
+  for(int i=0; i< 2*n-1; i++){
+    for(int j=0; j<2*n-1; j++){
+      int top = i;
+      int left = j;
+      int down = (2*n-2) - j;
+      int right = (2*n-2) -i;
+      cout<< (n-min(min(top, down) , min(right, left)));
+    }
+    cout << endl;
+
+  }
+}
+
+int main(){
+
+  int n;
+  cin >> n;
+  pattern21(n);
+
+}
