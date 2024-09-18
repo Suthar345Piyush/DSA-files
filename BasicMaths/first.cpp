@@ -132,4 +132,28 @@ int main(){
 
 }
 
+//prime check:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+  int n;
+  cin >> n;
+  int count = 0;
+  for(int i=1; i*i<=n; i++){
+    if(n%i == 0){
+      count++;
+      if((n%i != i)){
+        count++;
+      }
+    }
+    if(count == 2)
+      cout << "true";
+      else cout << "false";
+  }
+}
+
+//time complexity of this code is = O(sqrt(N))
+//whenever we want to check for prime , use square method.
 
